@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: Manrope;
+  src: url(../src/assets/Manrope/Manrope-VariableFont_wght.ttf);
+}
+
+.Manrope{
+  font-family: Manrope;
+  font-weight: 800;
+}

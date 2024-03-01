@@ -1,25 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import AdviceComponent from './Components/AdviceComponent';
+import getData from './DataServices/DataServices';
+import adviceGen from "./Interfaces/interfaces";
+
 
 function App() {
+
+  const [nextAdvice, setnextAdvice] = useState<boolean>(true)
+  const [adviceText, setadviceText] = useState<adviceGen>();
+
+  const getNextAdvice = () => {
+      setnextAdvice(!nextAdvice);
+    }
+
+  useEffect(() => {
+
+    const adviceData = async () => {
+
+      const fetchData = await getData();
+      console.log(fetchData);
+      setadviceText(fetchData);
+
+    }
+    adviceData();
+
+  }, [nextAdvice] )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className='Manrope'>
+
+      { adviceText && <AdviceComponent id={adviceText.slip.id} advice={adviceText.slip.advice} onClickNextBtn={getNextAdvice}/> }
+
     </div>
+
   );
 }
 
