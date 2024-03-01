@@ -46,3 +46,8 @@
   font-family: Manrope;
   font-weight: 800;
 }
+
+.diceBtn:hover {
+  box-shadow: 0 0 30px #52ffa8;
+  opacity: 0.9;
+}

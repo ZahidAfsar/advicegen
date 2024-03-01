@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import DividerPic from '../assets/advice-generator-app-main 2/images/pattern-divider-desktop.svg'
 import DicePic from "../assets/advice-generator-app-main 2/images/icon-dice.svg";
+import '../App.css';
 
     const AdviceComponent = (props: { id: number, advice: string, onClickNextBtn: () => void }) => {
 
@@ -13,13 +14,13 @@ import DicePic from "../assets/advice-generator-app-main 2/images/icon-dice.svg"
 
                     <h3 className="text-[#52ffa8] text-[18px] tracking-[5px]">ADVICE #<span>{props.id}</span></h3>
 
-                    <p className="text-[30px] text-[#cee3e9] text-center">"<span>{props.advice}</span>"</p>
+                    <p className="text-[28px] text-[#cee3e9] text-center">"<span>{props.advice}</span>"</p>
 
                     <div className="mt-4">
                         <img src={DividerPic} alt="DividerForDiv" />
                     </div>
 
-                    <div onClick={props.onClickNextBtn} className="grid place-items-center rounded-full absolute -bottom-[32px] hover:shadow-md hover:shadow-[#52ffa8] cursor-pointer  bg-[#52ffa8] h-[64px] w-[64px]">
+                    <div onClick={props.onClickNextBtn} className="grid diceBtn place-items-center rounded-full absolute -bottom-[32px] hover:shadow-xl hover:shadow-[#52ffa8] bg-[#52ffa8] h-[64px] w-[64px]">
                         <img src={DicePic} alt="DiceNextBtn" />
                     </div>
                 </div>
