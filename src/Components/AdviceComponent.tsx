@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import DividerPic from '../assets/advice-generator-app-main 2/images/pattern-divider-desktop.svg'
 import DicePic from "../assets/advice-generator-app-main 2/images/icon-dice.svg";
+import DividerPic from '../assets/advice-generator-app-main 2/images/pattern-divider-desktop.svg'
 import '../App.css';
 
-    const AdviceComponent = (props: { id: number, advice: string, onClickNextBtn: () => void }) => {
+    const AdviceComponent = (props: { onClickNextBtn: () => void, advice: string, id: number } ) => {
 
     return (
         <>

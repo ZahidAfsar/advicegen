@@ -14,12 +14,12 @@ function App() {
       setnextAdvice(!nextAdvice);
     }
 
-  useEffect(() => {
+  useEffect( () => {
 
     const adviceData = async () => {
 
       const fetchData = await getData();
-      console.log(fetchData);
+
       setadviceText(fetchData);
 
     }
@@ -31,7 +31,7 @@ function App() {
 
     <div className='Manrope'>
 
-      { adviceText && <AdviceComponent id={adviceText.slip.id} advice={adviceText.slip.advice} onClickNextBtn={getNextAdvice}/> }
+      { adviceText && <AdviceComponent onClickNextBtn={getNextAdvice} id={adviceText.slip.id} advice={adviceText.slip.advice}/> }
 
     </div>
 
