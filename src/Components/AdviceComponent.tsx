@@ -12,7 +12,7 @@ import '../App.css';
 
                 <div className="gap-3 px-7 pt-12 pb-16 max-w-[32rem] max-sm:mx-[20px] rounded-[26px] relative bg-[#323a49] mx-auto grid place-items-center">
 
-                    <h3 className="text-[#52ffa8] text-[18px] tracking-[5px]">ADVICE #<span>{props.id}</span></h3>
+                    <h3 className="text-[#52ffa8] text-[18px] tracking-[6px]">ADVICE #<span>{props.id}</span></h3>
 
                     <p className="text-[28px] text-[#cee3e9] text-center">"<span>{props.advice}</span>"</p>
 
